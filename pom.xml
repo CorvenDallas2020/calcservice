@@ -12,14 +12,15 @@
 	<artifactId>calcservice</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>calcservice</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Test Sopra</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>8</java.version>
 	</properties>
 	<dependencies>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
+			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
 		<dependency>
@@ -27,6 +28,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
 	</dependencies>
 
 	<build>
