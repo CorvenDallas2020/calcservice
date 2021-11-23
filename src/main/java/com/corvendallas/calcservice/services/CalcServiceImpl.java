@@ -27,9 +27,9 @@ public class CalcServiceImpl implements CalcServiceInterface {
         log.debug("Task result {} for : {} {}", task, data1, data2);
 
         switch (task) {
-            case "add":case "suma":
+            case "add":case "sumar":
                 return data1+data2;
-            case "substract":case "resta":
+            case "substract":case "restar":
                 return data1-data2;
             default:
                 log.error("Task not allowed: {}", task);

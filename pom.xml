@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.corvendallas</groupId>
 	<artifactId>calcservice</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>calcservice</name>
 	<description>Test Sopra</description>
 	<properties>
@@ -32,6 +32,7 @@
 	</dependencies>
 
 	<build>
+		<finalName>CalcService</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

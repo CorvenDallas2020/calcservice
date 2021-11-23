@@ -66,7 +66,7 @@ public class CalcServiceTests {
     @Test
     public void testAddOk_ES() throws URISyntaxException {
 
-        ResponseEntity<Double> result = performTask("5", "10", "suma");
+        ResponseEntity<Double> result = performTask("5", "10", "sumar");
         Assertions.assertEquals(200, result.getStatusCodeValue());
         Assertions.assertEquals(15.0d, result.getBody().doubleValue(), 0.001d);
     }
@@ -74,7 +74,7 @@ public class CalcServiceTests {
     @Test
     public void testSubstractOk_ES() throws URISyntaxException {
 
-        ResponseEntity<Double> result = performTask("5", "10", "resta");
+        ResponseEntity<Double> result = performTask("5", "10", "restar");
         Assertions.assertEquals(200, result.getStatusCodeValue());
         Assertions.assertEquals(-5.0d, result.getBody().doubleValue(), 0.001d);
     }
@@ -93,7 +93,7 @@ public class CalcServiceTests {
     @Test
     public void testSubstractKO() throws URISyntaxException {
         Exception exception = assertThrows(RuntimeException.class, () -> {
-            this.performTask("5", "b", "resta");});
+            this.performTask("5", "b", "restar");});
         
         String expectedMessage = "Bad Request";
         String actualMessage = exception.getMessage();
@@ -103,8 +103,8 @@ public class CalcServiceTests {
 
     @Test
     public void testTaskNotAllowed() throws URISyntaxException {
-        Exception exception = assertThrows(RuntimeException.class, () -> {
-            calcservice.performTask(5, 10, "multiplica");});
+        Exception exception = assertThrows(TaskNotAllowedException.class, () -> {
+            calcservice.performTask(5, 10, "multiplicar");});
         
         String expectedMessage = "Task not allowed: multiplica";
         String actualMessage = exception.getMessage();
