@@ -18,7 +18,7 @@ public class CalcServiceImpl implements CalcServiceInterface {
      * @param data2
      * @param task English(add, substract) Spanish (suma,resta)
      * @return result or exception thrown
-     * @throws RuntimeException
+     * @throws TaskNotAllowedException
      */
 
     @Override
